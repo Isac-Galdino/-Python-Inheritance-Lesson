@@ -70,19 +70,18 @@ class game:
         self.game_name = game_name;
         self.__game_value = game_value;
     
-    def game_value_increase(self, increasment):
-        self.__game_value += increasment;
+    def valor_acrescentado(self, increasment):
+        self.__game_value += increasment
         if increasment > 0:
-            print(f"O {self.game_name} aumentou em R$ {self.increasment}");
+            print(f"O jogo de nome {self.game_name} aumentou R$ {increasment}")
         elif increasment < 0:
-            print(f"O {self.game_name} abaixou em R$ {self.increasment}");
-        elif increasment == 0:
-            print(f"O {sef.game_name} não aumentou e nem abaixou de preço");
+            print(f"O jogo de nome {self.game_name} abaixou R$ {increasment}")
+        else:
+            print("O jogo não mudou de valor")
 
-    def mostrar_preço(self):
-        return f"O novo valor do {self.game_name} é de {self.__game_value}"
+    def mostrar_resultado(self):
+        return f"Após as informaçoes R$ {self.__game_value}"
 
-new_value = game("God Of War", 300)
-new_value.game_value_increase(50)
-print(new_value.mostrar_preço())
-            
+game1 = game("God of war", 100)
+game1.valor_acrescentado(0)
+print(game1.mostrar_resultado())            
