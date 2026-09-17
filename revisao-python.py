@@ -129,7 +129,7 @@ print(aluno1.verificar_aprovacao())
 
 #novo projeto: Desenvolvimento de sistemas de entregas ou sistema de loja online
 class Loja:
-    def __init__(self, emitent, destin, nota_ident):
+    def __init__(self, emitent, destin, nota_ident, email):
         self.emitent = emitent
         self.destin = destin
         if nota_ident > 44 and nota_ident < 44:
@@ -137,8 +137,13 @@ class Loja:
         else:
             raise ValueError("O número de nota fiscal informada é inválida")
 
+        if "@" not in email:
+            raise ValueError("O e-mail informado é inválido")
+        else:
+            self.__email = email
+
     def get_info(self):
-        
+
         
 
             
